@@ -29,7 +29,7 @@ def replace_all_uuid(file, uid_dict):
         file = file.replace(old_uuid, new_uuid)
     return file
 
-def process_project(filename):
+def process_project(filename, course_filename):
 
     uuid_dict = dict()
 
@@ -44,10 +44,30 @@ def process_project(filename):
     with open(filename, 'w') as file:
         file.write(project_data)
 
-if __name__ == '__main__':
-    file_to_change = "project.json"
+    with open(course_filename, 'r') as file:
+        course_data = file.read()
+    
+    course_data = replace_all_uuid(course_data, uuid_dict)
 
-    process_project( file_to_change )
+    with open(course_filename, 'w') as file:
+        file.write(course_data)
+    
+
+
+if __name__ == '__main__':
+    #If this file is in the root dir, add course name here and run. It will change
+    #all UUIDs. UUIDs that are matching will continue to match.
+    course_to_change = 'AddCourseNameHere'
+
+
+    course_directory = f'{course_to_change}/course.json'
+    project_directory = f'{course_to_change}/projects'  # Change this to the path of your parent directory
+
+    for dirpath, dirnames, filenames in os.walk(project_directory):
+        for filename in filenames:
+            if filename == 'project.json':
+                process_project( os.path.join(dirpath, filename), course_directory )
+                print("Finished parsing ", course_directory + dirpath + filename)
 
 
 

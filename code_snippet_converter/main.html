@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Web App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Input Div -->
+        <select id="programmingLanguages">
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                    </select>
+        <div class="input-div">
+            
+            <!-- Mode Selector Div (1/3 of the width) -->
+            <div class="mode-selector">
+                
+                <!-- Add your mode selection controls here (e.g., buttons, checkboxes, etc.) -->
+                <div class="mode-column">
+                    
+                    <label>
+                        <input type="radio" name="mode" value="none" checked> None
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="mode" value="mark"> Mark
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="mode" value="strike"> Strike
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="mode" value="filename"> Filename
+                    </label>
+                    <br>
+                </div>
+                <div class="mode-column" id="options">
+                    
+                </div>
+                <!-- Add more mode options as needed -->
+                <button onclick="clearMode()">Clear Selected</button>
+                <button onclick="clearHtml()">Clear HTML</button>
+                <button onclick="copyOutputToClipboard()">Copy Output</button>
+                
+            </div>
+            <!-- Input Text Div (2/3 of the width) -->
+            <div class="input-text-container">
+                <h2>Input and Format Text</h2>
+                <textarea id="input-filename" rows="1" cols="50"></textarea>
+                <textarea id="input-text" rows="25" cols="50"></textarea>
+                <!-- You can add any formatting controls here as per your requirement -->
+            </div>
+        </div>
+
+        <!-- Output Div -->
+        <div class="output-div">
+            <!-- Left side of the output (blank div for now) -->
+            <div class="output-left">
+                <!-- You can add content here later if needed -->
+            </div>
+            <!-- Vertical bar separator -->
+            <div class="vertical-bar"></div>
+            <!-- Right side of the output (for displaying unformatted text) -->
+            <div class="output-right">
+                <h2>Output (Unformatted Text)</h2>
+                <div id="display-area"></div>
+            </div>
+        </div>
+
+        <!-- To Pickcode div -->
+        <div class="output-div">
+            <!-- Left side of the output (blank div for now) -->
+            <div class="input-text-container">
+                <h2>Input For pickCode Conversion <button onclick="copyPickCodeOutputToClipboard()">Copy</button></h2>
+                <textarea id="input-text-pickcode" rows="10" cols="50"></textarea>
+                <!-- You can add any formatting controls here as per your requirement -->
+            </div>
+            <!-- Vertical bar separator -->
+            <div class="vertical-bar"></div>
+            <!-- Right side of the output (for displaying unformatted text) -->
+            <div class="output-right">
+                <h2>Output (Unformatted Text)</h2>
+                <div id="display-area-pickcode"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+/* Styling for the container div */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 200vh; /* Adjust this value to fit your needs */
+}
+
+/* Styling for the input div */
+.input-div {
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* styles.css */
+
+/* Add the following CSS rule to create a two-column layout for the radio buttons */
+.mode-selector {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mode-column {
+    flex: 1 1 50%; /* Each column will take 50% of the available width */
+}
+
+/* Container for mode selector */
+.mode-selector-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap into a new column */
+}
+
+/* Style for each mode option */
+.mode-option {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+/* Styling for the input text div */
+.input-text-container {
+    flex: 2;
+}
+
+/* Styling for the output div */
+.output-div {
+    flex: 1;
+    display: flex; /* Split into two equal-width divs horizontally */
+    border-top: 1px solid #ccc;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Styling for the vertical bar separator */
+.vertical-bar {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+/* Styling for the left side of the output div */
+.output-left {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Styling for the right side of the output div */
+.output-right {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Additional Styles */
+
+/* Mode Selector Options */
+.mode-selector label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Button Styles */
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Textarea Styles */
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+/* Styles for each Mode */
+
+/* Filename Mode Styles */
+.filename {
+    color: rgb(171, 184, 195);
+}
+
+
+
+/* Red Mode Styles */
+.red {
+    color: #dc3545;
+}
+
+/* Snippet Row Styles */
+.snippet-row {
+    background-color: #f8f8f8; /* Slightly darker background */
+}
+
+/* Line Number Styles */
+.line-number {
+    color: rgb(171, 184, 195);
+}
+
+/* Code Styles */
+.code {
+    font-family: 'Courier New', monospace; /* Different font to indicate code */
+    color: rgb(4, 3, 3);
+}
+
+/* Python Styles */
+.python-comment {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* String Mode Styles */
+.python-string {
+    color: #34a853; /* Green */
+}
+
+/* Number Mode Styles */
+.python-number {
+    color: #1582b8; /* Dark blue */
+}
+
+/* Property Mode Styles */
+.python-property {
+    color: #6610f2;
+}
+
+/* Variable Mode Styles */
+.python-variable {
+    color: #7f15b8; /* Dark blue */
+}
+
+/* Java styles */
+
+/* Comment Mode Styles */
+.java-comment {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* String Mode Styles */
+.java-string {
+    color: #34a853; /* Green */
+}
+
+/* Number Mode Styles */
+.java-number {
+    color: #1582b8; /* Dark blue */
+}
+
+/* Variable Mode Styles */
+.java-keyword {
+    color: #641083; /* Dark blue */
+}
+
+/* Definition Mode Styles */
+.java-definition {
+    color:#f25eab
+}
+
+
+/* HTML Styles */
+.html-attribute {
+    color: rgb(27, 132, 19);
+
+}
+
+.html-value {
+    color: rgb(107, 8, 149);
+}
+
+.html-tag {
+    color: rgb(4, 111, 199);
+}
+.html-comment {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* CSS Styles */
+
+.css-number {
+    color: rgb(139, 19, 217);
+}
+
+.css-string {
+    color :rgb(4, 111, 199);
+
+}
+
+.css-property {
+    color: rgb(27, 132, 19);
+}
+
+.css-pseudoclass {
+    color: rgb(160, 202, 85);
+}
+
+.css-comment {
+    color: #6c757d;
+    font-style: italic;
+}
